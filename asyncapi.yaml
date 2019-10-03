@@ -1,7 +1,7 @@
 asyncapi: 2.0.0
 info:
   title: PEAX.ch Async API
-  version: '0.0.1'
+  version: '0.0.3'
   description: |
     The PEAX.ch Async API API allows you to communicate with PEAX Services in a async manner using message queues. \
     This contract is written in the **viewpoint of developers outside** of PEAX integrating their system with PEAX services.
