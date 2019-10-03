@@ -1,7 +1,7 @@
 asyncapi: 2.0.0
 info:
   title: PEAX.ch Async API
-  version: '0.0.3'
+  version: '0.0.4'
   description: |
     The PEAX.ch Async API API allows you to communicate with PEAX Services in a async manner using message queues. \
     This contract is written in the **viewpoint of developers outside** of PEAX integrating their system with PEAX services.
@@ -22,14 +22,14 @@ servers:
 defaultContentType: application/json
 
 channels:
-  queues/newPeaxUserCreation:
+  newPeaxUserCreation:
     description: Messages published to this queue result in new PEAX users. 
     publish:
       operationId: newPeaxUserCreation
       summary: Your provided correlationId will be used in the peaxUserCreationResponse
       message:
         $ref: '#/components/messages/peaxUserCreation'
-  queues/newPeaxUserCreationResponse:
+  newPeaxUserCreationResponse:
     description: Subscribe to this queue for information about newly created users (including their PEAX-ID)
     subscribe:
       # summary: Messages published to this queue result in new PEAX users
